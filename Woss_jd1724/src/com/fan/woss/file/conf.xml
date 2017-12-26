@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<woss>
+	<dbstore class="com.fan.woss.server.DBStoreImpl">
+		<driver>oracle.jdbc.dirver.OracleDriver</driver>
+		<url>jdbc:oracle:thin:@127.0.0.1:1521:XE</url>
+		<username>briup</username>
+		<password>briup</password>
+	</dbstore>
+	<logger class="com.fan.woss.util.LoggerImpl">
+		<log-properties>src/log4j.properties</log-properties>
+	</logger>
+
+	<backup class="com.fan.woss.util.BackUPImpl">
+		<back-temp>src/com/fan/woss/file</back-temp>
+	</backup>
+
+	<gather class="com.fan.woss.client.GatherImpl">
+		<src-file>src/com/fan/woss/file/radwtmp</src-file>
+		<gather-backfile>rollback.txt</gather-backfile>
+		<pointer>pointer.txt</pointer>
+	</gather>
+
+	<client class="com.fan.woss.client.ClientImpl">
+		<client-backfile>clientback.txt</client-backfile>
+		<ip>127.0.0.1</ip>
+		<client-port>9999</client-port>
+	</client>
+
+	<server class="com.fan.woss.server.ServerImpl">
+		<server-port>9999</server-port>
+		<server-backfile>serverback.txt</server-backfile>
+	</server>
+</woss>
