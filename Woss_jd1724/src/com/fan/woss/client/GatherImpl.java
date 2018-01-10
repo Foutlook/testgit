@@ -77,8 +77,8 @@ public class GatherImpl implements Gather, ConfigurationAWare {
 			String[] strings = str.split("[|]");
 			bidr = new BIDR();
 			// 3.封装数据
-			// 3.1 数据分类--七上八下
-			// 3.2 上线记录:(包含7的数据行)
+			// 		数据分类--七上八下
+			// 		上线记录:(包含7的数据行)
 			// #briup1660|037:wKgB1660A|7|1239110900|44.211.221.247
 			// 用户名 | NAS_IP | 7 | 上线时间 | 用户IP
 			if (strings[2].equals("7")) {

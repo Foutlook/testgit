@@ -15,7 +15,7 @@ import com.briup.woss.client.Client;
 
 public class ClientImpl implements Client,ConfigurationAWare {
 	private Configuration configuration;
-	// 备份文件路径，啦啦啦啦
+	// 备份文件路径，
 	private String fileName;
 	private BackUP backUP;
 	private Logger log;
